@@ -30,7 +30,7 @@ def main():
     print(f"Wins: {wins}, Losses: {losses}, Ties: {ties}")
 
 def get_user_choice():
-    """Get the user's choice and ensure it's valid."""
+
     choices = ["rock", "paper", "scissors", "quit"]
     while True:
         choice = input("Choose rock, paper, scissors, or quit: ").lower()
@@ -39,11 +39,9 @@ def get_user_choice():
         print("Invalid choice. Please try again.")
 
 def get_computer_choice():
-    """Randomly select rock, paper, or scissors for the computer."""
     return random.choice(["rock", "paper", "scissors"])
 
 def determine_winner(user_choice, computer_choice):
-    """Determine the winner of the game."""
     if user_choice == computer_choice:
         return "tie"
     elif (user_choice == "rock" and computer_choice == "scissors") or \
